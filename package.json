@@ -1,6 +1,7 @@
 {
   "name": "cdk-template",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
