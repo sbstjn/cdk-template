@@ -1,1 +1,1 @@
-# CDK Template
+# GitHub Template for AWS CDK projects
