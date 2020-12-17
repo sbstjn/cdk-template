@@ -1,8 +1,6 @@
 name: Integration
 
-on:
-  push:
-    branches: ['main']
+on: [push, pull_request]
 
 jobs:
   build:
@@ -49,8 +47,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Semantic Release
+    - if: github.ref == 'refs/heads/main'
       uses: cycjimmy/semantic-release-action@v2
+      name: Semantic Release
       timeout-minutes: 2
       id: semantic
       with:
