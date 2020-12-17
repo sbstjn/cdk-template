@@ -1,6 +1,6 @@
 name: Integration
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -41,14 +41,14 @@ jobs:
     - run: yarn test
   version:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     needs:
       - build
       - test
     steps:
     - uses: actions/checkout@v2
     
-    - if: github.ref == 'refs/heads/main'
-      uses: cycjimmy/semantic-release-action@v2
+    - uses: cycjimmy/semantic-release-action@v2
       name: Semantic Release
       timeout-minutes: 2
       id: semantic
