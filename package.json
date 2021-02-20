@@ -1,8 +1,20 @@
 {
   "name": "cdk-template",
+  "description": "Lorem Ipsum",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
+  "author": "Sebastian Müller <mail@sbstjn.com> (https://sbstjn.com)",
+  "homepage": "https://github.com/sbstjn/cdk-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbstjn/cdk-template.git"
+  },
+  "keywords": [
+    "aws",
+    "aws-cdk",
+    "cdk"
+  ],
   "scripts": {
     "prebuild": "rimraf build",
     "build": "tsc",
