@@ -1,15 +1,15 @@
-import { run } from '../../../src/lambda/handler'
+import { run } from '../../../src/example-lambda/handler'
 
 describe('Handler', () => {
   it('returns string value', async () => {
     await expect(
-      run({fails: false})
+      run({ fails: false })
     ).resolves.toBe("Done")
   })
 
   it('throws an exception', async () => {
     await expect(
-      run({fails: true})
+      run({ fails: true })
     ).rejects.toThrowError('Failed on purpose')
   })
 })

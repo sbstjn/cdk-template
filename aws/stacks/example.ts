@@ -17,8 +17,7 @@ export class ExampleStack extends cdk.Stack {
     topic.addSubscription(new subs.SqsSubscription(queue))
 
     const func = new lambda.NodejsFunction(this, 'ExampleFunction', {
-      entry: 'src/lambda/handler.ts',
-      functionName: 'foo',
+      entry: 'src/example-lambda/handler.ts',
       handler: 'run',
     })
 
