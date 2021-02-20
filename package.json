@@ -10,6 +10,7 @@
     "test": "jest",
     "cdk": "cdk",
     "deploy": "cdk deploy",
+    "format": "yarn prettier-format",
     "prettier-format": "prettier --config .prettierrc 'aws/**/*.ts' --write",
     "prettier-watch": "onchange 'aws/**/*.ts' -- prettier --write {{changed}}"
   },

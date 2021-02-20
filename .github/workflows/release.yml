@@ -3,10 +3,7 @@ name: Integration
 on:
   push:
     branches:
-      - '*'
-      - '*/*'
-      - '**'
-      - '!main'
+      - 'main'
 
 jobs:
   build:
@@ -45,3 +42,23 @@ jobs:
     - run: yarn
 
     - run: yarn test
+  version:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - build
+      - test
+    steps:
+    - uses: actions/checkout@v2
+    
+    - uses: cycjimmy/semantic-release-action@v2
+      name: Semantic Release
+      timeout-minutes: 2
+      id: semantic
+      with:
+        extra_plugins: |
+          @semantic-release/git
+          @semantic-release/changelog
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
