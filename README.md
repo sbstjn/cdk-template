@@ -10,18 +10,18 @@
 In dui dolor, pharetra quis rhoncus nec, scelerisque sit amet elit. Suspendisse convallis dictum urna eu accumsan.
 
 ```bash
-# Build TypeScript Code
-$ > yarn build
-
-# Test TypeScript Code
-$ > yarn test
+# Deploy CloudFormation Stack
+$ > yarn cdk deploy
 ```
 
 ## Development
 
 ```bash
-# Format TypeScript Code with Prettier
+# Test TypeScript Code
 $ > yarn test
+
+# Format TypeScript Code with Prettier
+$ > yarn prettier-format
 ```
 
 ## License
