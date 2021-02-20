@@ -7,6 +7,6 @@ const app = new cdk.App()
 
 new ExampleStack(app, 'Example', {
   env: {
-    region: 'eu-central-1'
-  }
+    region: 'eu-central-1',
+  },
 })

@@ -9,7 +9,9 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "deploy": "cdk deploy"
+    "deploy": "cdk deploy",
+    "prettier-format": "prettier --config .prettierrc 'aws/**/*.ts' --write",
+    "prettier-watch": "onchange 'aws/**/*.ts' -- prettier --write {{changed}}"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.90.0",
@@ -24,7 +26,11 @@
     "aws-cdk": "1.90.0",
     "aws-lambda-consumer": "^1.0.0",
     "esbuild": "0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "jest": "^26.4.2",
+    "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.2.0",
     "ts-node": "^9.0.0",

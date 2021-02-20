@@ -5,24 +5,21 @@ import * as sqs from '@aws-cdk/aws-sqs'
 import * as cdk from '@aws-cdk/core'
 
 export class ExampleStack extends cdk.Stack {
-
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props)
 
     const queue = new sqs.Queue(this, 'ExampleQueue', {
-      visibilityTimeout: cdk.Duration.seconds(300)
+      visibilityTimeout: cdk.Duration.seconds(300),
     })
 
     const topic = new sns.Topic(this, 'ExampleTopic')
 
-    topic.addSubscription(
-      new subs.SqsSubscription(queue)
-    )
+    topic.addSubscription(new subs.SqsSubscription(queue))
 
     const func = new lambda.NodejsFunction(this, 'ExampleFunction', {
       entry: 'src/lambda/handler.ts',
-      functionName: "foo",
-      handler: 'run'
+      functionName: 'foo',
+      handler: 'run',
     })
 
     topic.grantPublish(func)
