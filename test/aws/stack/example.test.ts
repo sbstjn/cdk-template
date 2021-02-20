@@ -1,11 +1,11 @@
-import { expect as expectCDK, haveResource } from '@aws-cdk/assert'
+import '@aws-cdk/assert/jest';
 import * as cdk from '@aws-cdk/core'
 
 import { ExampleStack } from '../../../aws/stacks/example'
 
 describe('Stack', () => {
   let app: cdk.App;
-  let stack: cdk.Stack
+  let stack: ExampleStack
 
   beforeAll(() => {
     app = new cdk.App()
@@ -14,21 +14,21 @@ describe('Stack', () => {
 
   describe('SQS Queue', () => {
     it('is created', () => {
-      expectCDK(stack).to(haveResource("AWS::SQS::Queue", {
+      expect(stack).toHaveResource("AWS::SQS::Queue", {
         VisibilityTimeout: 300
-      }))
+      })
     })
   })
 
   describe('SNS Topic', () => {
     it('is created', () => {
-      expectCDK(stack).to(haveResource("AWS::SNS::Topic"))
+      expect(stack).toHaveResource("AWS::SNS::Topic")
     })
   })
 
   describe('Lambda Function', () => {
     it('is created', () => {
-      expectCDK(stack).to(haveResource("AWS::Lambda::Function"))
+      expect(stack).toHaveResource("AWS::Lambda::Function")
     })
   })
 })
