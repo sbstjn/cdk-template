@@ -1,4 +1,4 @@
-# GitHub Template for AWS CDK projects
+# Template for AWS CDK projects
 
 [![MIT License](https://badgen.now.sh/badge/License/MIT/blue)](https://github.com/sbstjn/cdk-template/blob/master/LICENSE.md)
 [![sbstjn.com](https://badgen.now.sh/badge/by/sbstjn/purple)](https://sbstjn.com)
