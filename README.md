@@ -26,7 +26,7 @@ $ > yarn prettier-format
 
 ## License
 
-Feel free to use the code, it's released using the [MIT license](LICENSE.md).
+Feel free to use the code, it's released using the [MIT license](LICENSE).
 
 ## Contribution
 
