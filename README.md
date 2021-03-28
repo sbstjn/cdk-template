@@ -2,6 +2,7 @@
 
 [![MIT License](https://badgen.now.sh/badge/License/MIT/blue)](https://github.com/sbstjn/cdk-template/blob/master/LICENSE.md)
 [![sbstjn.com](https://badgen.now.sh/badge/by/sbstjn/purple)](https://sbstjn.com)
+[![Releases](https://badgen.net/github/release/sbstjn/cdk-template)](https://github.com/sbstjn/cdk-template/releases)
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas accumsan nibh venenatis ligula tincidunt auctor. Vivamus non imperdiet urna. Curabitur blandit sodales metus, sit amet sodales turpis faucibus sit amet.
 
