@@ -1,10 +1,10 @@
-import '@aws-cdk/assert/jest';
+import '@aws-cdk/assert/jest'
 import * as cdk from '@aws-cdk/core'
 
 import { ExampleStack } from '../../../aws/stacks/example'
 
 describe('Stack', () => {
-  let app: cdk.App;
+  let app: cdk.App
   let stack: ExampleStack
 
   beforeAll(() => {
