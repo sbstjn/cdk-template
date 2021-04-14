@@ -1920,10 +1920,10 @@ es5-ext@0.8.x:
   resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.8.2.tgz#aba8d9e1943a895ac96837a62a39b3f55ecd94ab"
   integrity sha1-q6jZ4ZQ6iVrJaDemKjmz9V7NlKs=
 
-esbuild@0.11.6:
-  version "0.11.6"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.6.tgz#20961309c4cfed00b71027e18806150358d0cbb0"
-  integrity sha512-L+nKW9ftVS/N2CVJMR9YmXHbkm+vHzlNYuo09rzipQhF7dYNvRLfWoEPSDRTl10and4owFBV9rJ2CTFNtLIOiw==
+esbuild@0.11.10:
+  version "0.11.10"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.10.tgz#f5d39e4d9cc130b78d751664fef1b663240f5545"
+  integrity sha512-XvGbf+UreVFA24Tlk6sNOqNcvF2z49XAZt4E7A4H80+yqn944QOLTTxaU0lkdYNtZKFiITNea+VxmtrfjvnLPA==
 
 escalade@^3.1.1:
   version "3.1.1"
