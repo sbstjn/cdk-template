@@ -36,7 +36,7 @@
     "@types/aws-lambda": "8.10.76",
     "@types/jest": "26.0.23",
     "@types/node": "15.0.2",
-    "aws-cdk": "1.102.0",
+    "aws-cdk": "1.105.0",
     "@types/node": "15.0.1",
     "aws-cdk": "1.102.0",
     "aws-lambda-consumer": "1.0.0",
