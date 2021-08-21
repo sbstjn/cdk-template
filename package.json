@@ -33,7 +33,7 @@
     "@aws-cdk/aws-sns-subscriptions": "1.119.0",
     "@aws-cdk/aws-sqs": "1.119.0",
     "@aws-cdk/core": "1.119.0",
-    "@types/aws-lambda": "8.10.82",
+    "@types/aws-lambda": "8.10.83",
     "@types/jest": "27.0.1",
     "@types/node": "16.6.2",
     "aws-cdk": "1.119.0",
