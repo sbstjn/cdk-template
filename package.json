@@ -39,7 +39,7 @@
     "aws-cdk": "1.120.0",
     "aws-lambda-consumer": "1.0.0",
     "eslint": "7.32.0",
-    "esbuild": "0.12.23",
+    "esbuild": "0.12.24",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.1",
     "jest": "27.1.0",
