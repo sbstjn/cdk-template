@@ -42,7 +42,7 @@
     "esbuild": "0.12.26",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.1",
-    "jest": "27.1.1",
+    "jest": "27.2.0",
     "prettier": "2.4.0",
     "rimraf": "3.0.2",
     "ts-jest": "27.0.5",
