@@ -40,7 +40,7 @@
     "aws-lambda-consumer": "1.0.0",
     "eslint": "7.32.0",
     "esbuild": "0.14.23",
-    "eslint-config-prettier": "8.4.0",
+    "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "3.4.1",
     "jest": "27.5.1",
     "prettier": "2.5.1",
