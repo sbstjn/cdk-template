@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import * as cdk from '@aws-cdk/core'
+import { App } from 'aws-cdk-lib'
 import { ExampleStack } from './stacks/example'
 
-const app = new cdk.App()
+const app = new App()
 
 new ExampleStack(app, 'Example', {
   env: {

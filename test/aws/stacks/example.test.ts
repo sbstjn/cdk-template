@@ -1,34 +1,38 @@
-import '@aws-cdk/assert/jest'
-import * as cdk from '@aws-cdk/core'
+import { Template } from 'aws-cdk-lib/assertions'
+import { App } from 'aws-cdk-lib'
 
 import { ExampleStack } from '../../../aws/stacks/example'
 
 describe('Stack', () => {
-  let app: cdk.App
+  let app: App
   let stack: ExampleStack
+  let template: Template
 
   beforeAll(() => {
-    app = new cdk.App()
+    app = new App()
     stack = new ExampleStack(app, 'MyTestStack')
+    template = Template.fromStack(stack)
   })
 
   describe('SQS Queue', () => {
     it('is created', () => {
-      expect(stack).toHaveResource("AWS::SQS::Queue", {
-        VisibilityTimeout: 300
+      template.hasResource('AWS::SQS::Queue', {
+        Properties: {
+          VisibilityTimeout: 300,
+        },
       })
     })
   })
 
   describe('SNS Topic', () => {
     it('is created', () => {
-      expect(stack).toHaveResource("AWS::SNS::Topic")
+      template.hasResource('AWS::SNS::Topic', {})
     })
   })
 
   describe('Lambda Function', () => {
     it('is created', () => {
-      expect(stack).toHaveResource("AWS::Lambda::Function")
+      template.hasResource('AWS::Lambda::Function', {})
     })
   })
 })
