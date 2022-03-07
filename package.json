@@ -38,7 +38,7 @@
     "@types/node": "17.0.21",
     "aws-cdk": "1.134.0",
     "aws-lambda-consumer": "1.0.0",
-    "eslint": "7.32.0",
+    "eslint": "8.10.0",
     "esbuild": "0.14.25",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
