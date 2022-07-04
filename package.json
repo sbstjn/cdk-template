@@ -31,7 +31,7 @@
     "@types/jest": "28.1.4",
     "@types/node": "18.0.0",
     "aws-cdk-lib": "^2.30.0",
-    "aws-sdk": "^2.1166.0",
+    "aws-sdk": "^2.1167.0",
     "constructs": "^10.1.43",
     "esbuild": "0.14.48",
     "eslint": "8.19.0",
