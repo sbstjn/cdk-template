@@ -27,7 +27,7 @@
     "prettier-watch": "onchange 'aws/**/*.ts' -- prettier --write {{changed}}"
   },
   "devDependencies": {
-    "@types/aws-lambda": "8.10.102",
+    "@types/aws-lambda": "8.10.103",
     "@types/jest": "28.1.8",
     "@types/node": "18.7.15",
     "aws-cdk-lib": "^2.40.0",
