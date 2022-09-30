@@ -32,7 +32,7 @@
     "@types/node": "18.7.23",
     "aws-cdk": "^2.44.0",
     "aws-cdk-lib": "^2.44.0",
-    "aws-sdk": "^2.1225.0",
+    "aws-sdk": "^2.1226.0",
     "constructs": "^10.1.116",
     "esbuild": "0.15.10",
     "eslint": "8.24.0",
