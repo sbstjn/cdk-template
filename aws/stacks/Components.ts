@@ -1,4 +1,4 @@
-import { App, Duration, Stack, StackProps } from 'aws-cdk-lib'
+import { Duration } from 'aws-cdk-lib'
 import {
   aws_sns as sns,
   aws_sns_subscriptions as subs,
@@ -8,7 +8,10 @@ import {
   aws_kms as kms,
 } from 'aws-cdk-lib'
 
-export class ExampleStack extends Stack {
+import { App } from '../base/App'
+import { Stack, StackProps } from '../base/Stack'
+
+export class Components extends Stack {
   constructor(scope: App, id: string, props?: StackProps) {
     super(scope, id, props)
 

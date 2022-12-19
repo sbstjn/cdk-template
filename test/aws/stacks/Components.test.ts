@@ -1,16 +1,21 @@
 import { Template } from 'aws-cdk-lib/assertions'
-import { App } from 'aws-cdk-lib'
+import { App } from '../../../aws/base/App'
+import { AppStage } from '../../../aws/config'
 
-import { ExampleStack } from '../../../aws/stacks/example'
+import { Components } from '../../../aws/stacks/Components'
 
 describe('Stack', () => {
   let app: App
-  let stack: ExampleStack
+  let stack: Components
   let template: Template
 
   beforeAll(() => {
-    app = new App()
-    stack = new ExampleStack(app, 'MyTestStack')
+    app = new App({
+      name: 'testing',
+      stage: AppStage.TESTING,
+    })
+
+    stack = new Components(app, 'MyTestStack')
     template = Template.fromStack(stack)
   })
 
