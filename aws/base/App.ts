@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib'
 import { AppStage } from '../config'
-import { Stack } from './Stack'
+import { Stack, StackProps } from './Stack'
 
 export interface AppProps {
   name: string
@@ -31,9 +31,10 @@ export class App extends cdk.App {
     return name
   }
 
-  add(component: typeof Stack) {
+  add(component: typeof Stack, props?: StackProps) {
     new component(this, component.name, {
       stackName: `${this.prefix}-${component.name}`,
+      ...props,
     })
   }
 }
