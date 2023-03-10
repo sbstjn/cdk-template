@@ -33,7 +33,7 @@
     "aws-cdk": "^2.68.0",
     "aws-cdk-lib": "^2.68.0",
     "aws-sdk": "^2.1331.0",
-    "constructs": "^10.1.272",
+    "constructs": "^10.1.273",
     "esbuild": "0.17.11",
     "eslint": "8.35.0",
     "eslint-config-prettier": "8.7.0",
