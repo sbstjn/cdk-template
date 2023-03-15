@@ -31,7 +31,7 @@
     "@types/jest": "28.1.8",
     "@types/node": "18.15.3",
     "aws-cdk": "^2.69.0",
-    "aws-cdk-lib": "^2.68.0",
+    "aws-cdk-lib": "^2.69.0",
     "aws-sdk": "^2.1335.0",
     "constructs": "^10.1.277",
     "esbuild": "0.17.11",
