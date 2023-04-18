@@ -30,7 +30,7 @@
     "@types/aws-lambda": "8.10.114",
     "@types/jest": "28.1.8",
     "@types/node": "18.15.11",
-    "aws-cdk": "^2.74.0",
+    "aws-cdk": "^2.75.0",
     "aws-cdk-lib": "^2.74.0",
     "aws-sdk": "^2.1359.0",
     "constructs": "^10.2.0",
