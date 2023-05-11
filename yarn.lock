@@ -10,20 +10,20 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@aws-cdk/asset-awscli-v1@^2.2.97":
-  version "2.2.99"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.99.tgz#8237c5f6b338609cc18c889fce1c577786a31d6f"
-  integrity sha512-r4W/w49xFmZHxF63rcdDWt1JoWbeOoS0pGgVit75GC1mrDvW6+UcOB42m/UMR2U92j+l4JGJut4PqIeSMeKJcQ==
+"@aws-cdk/asset-awscli-v1@^2.2.165":
+  version "2.2.169"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.169.tgz#9e30664943114908946157ae225e77d7d911488c"
+  integrity sha512-6lsgX4U3DryDNGUsymcyT8V4M7GVjmU6R57cN7Be6tIgINx1OK8Kl1ga/etpXxN1u9zGnxUmoQS7+/Xu+O/sNw==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-kubectl-v20/-/asset-kubectl-v20-2.1.1.tgz#d01c1efb867fb7f2cfd8c8b230b8eae16447e156"
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
-"@aws-cdk/asset-node-proxy-agent-v5@^2.0.77":
-  version "2.0.79"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.79.tgz#a1974b300a835d08258e147ce8c1575108685022"
-  integrity sha512-vqVD0HaUp5LTpIxfVEYyV5ajIVZ4Z5drib6ZUFSRRftdiJT/UKmSJUnpkIE2jQ8UYYoBtHaLt4Odvgelr7rz1w==
+"@aws-cdk/asset-node-proxy-agent-v5@^2.0.139":
+  version "2.0.142"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.142.tgz#95657c52ce7c00d17f96c7af193059f2f9167f8e"
+  integrity sha512-9NI2nBzpnBDhqlWF60AC6WG7ekNpd+z3uxZ1WgS0jwrv2Aco1MZIs8hs0tpABkT5Q8zTce/bPr98p31aIL0g9Q==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.7":
   version "7.16.7"
@@ -1221,32 +1221,27 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-at-least-node@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
-  integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
-
 available-typed-arrays@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-aws-cdk-lib@^2.78.0:
-  version "2.78.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.78.0.tgz#703d9611a4b05a866462b3a7f5f927413b507ac6"
-  integrity sha512-meg2lb7it1n83OrtAcA4Ttc3Tx3PDei2SdZ3Xe8/7RrfiMx3D6jBQZSzOj8hIOEhyNfYoz1AfZwIcqAlmWvmJQ==
+aws-cdk-lib@^2.79.0:
+  version "2.79.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.79.0.tgz#ec1b3dbb11fee723adc04088231fb56fa18c0f4c"
+  integrity sha512-uSQ/GBxnPj3bWRcA1/rTVYHzYksep7YDTGzuG0PDXaVf2kmIy1mcbOS0Phqr7sNE0L5vAjisWEygxyK3j0pLOQ==
   dependencies:
-    "@aws-cdk/asset-awscli-v1" "^2.2.97"
+    "@aws-cdk/asset-awscli-v1" "^2.2.165"
     "@aws-cdk/asset-kubectl-v20" "^2.1.1"
-    "@aws-cdk/asset-node-proxy-agent-v5" "^2.0.77"
+    "@aws-cdk/asset-node-proxy-agent-v5" "^2.0.139"
     "@balena/dockerignore" "^1.0.2"
     case "1.6.3"
-    fs-extra "^9.1.0"
+    fs-extra "^11.1.1"
     ignore "^5.2.4"
     jsonschema "^1.4.1"
     minimatch "^3.1.2"
     punycode "^2.3.0"
-    semver "^7.3.8"
+    semver "^7.5.0"
     table "^6.8.1"
     yaml "1.10.2"
 
@@ -1953,12 +1948,11 @@ for-each@^0.3.3:
   dependencies:
     is-callable "^1.1.3"
 
-fs-extra@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
-  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
+fs-extra@^11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.1.tgz#da69f7c39f3b002378b0954bb6ae7efdc0876e2d"
+  integrity sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==
   dependencies:
-    at-least-node "^1.0.0"
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
     universalify "^2.0.0"
@@ -3292,10 +3286,10 @@ sax@>=0.6.0:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-semver@7.x, semver@^7.3.5, semver@^7.3.8:
-  version "7.3.8"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.8.tgz#07a78feafb3f7b32347d725e33de7e2a2df67798"
-  integrity sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==
+semver@7.x, semver@^7.3.5, semver@^7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.0.tgz#ed8c5dc8efb6c629c88b23d41dc9bf40c1d96cd0"
+  integrity sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==
   dependencies:
     lru-cache "^6.0.0"
 
