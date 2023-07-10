@@ -1257,10 +1257,10 @@ aws-cdk@^2.87.0:
   optionalDependencies:
     fsevents "2.3.2"
 
-aws-sdk@^2.1410.0:
-  version "2.1410.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1410.0.tgz#8b7231c968384cfeb8bfe6bc3c4bb93e81f13cf7"
-  integrity sha512-EKC7DxVknwVKdZg7yRnH01UM3+K3H4SGfdM1GJ1lgHrWAdgEsMIzYDFceoFT+E7qIg5YHXgpKfpzDEKsI3p8wQ==
+aws-sdk@^2.1413.0:
+  version "2.1413.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1413.0.tgz#5ca9c08bacd3523fd6442dc3849d5f558d4e1f5b"
+  integrity sha512-vKpjC7iRwOhgv7P0xw90mVGO//2rqVPJKyYIs7uxLzSV0JzriVD+yqktOu/Hz6/phOmAd1cMIeFgpEC9ynrppg==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
