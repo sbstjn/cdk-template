@@ -23,7 +23,7 @@ $ > yarn cdk deploy
 $ > yarn test
 
 # Format TypeScript Code with Prettier
-$ > yarn prettier-format
+$ > yarn prettier
 ```
 
 ## License
