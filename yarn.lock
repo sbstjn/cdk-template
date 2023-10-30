@@ -827,10 +827,10 @@
   resolved "https://registry.npmjs.org/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
-"@types/aws-lambda@^8.10.124":
-  version "8.10.124"
-  resolved "https://registry.npmjs.org/@types/aws-lambda/-/aws-lambda-8.10.124.tgz#ea9d0aa36adbbae7a6c37edb072a1d64b49f0d4d"
-  integrity sha512-PHqK0SuAkFS3tZjceqRXecxxrWIN3VqTicuialtK2wZmvBy7H9WGc3u3+wOgaZB7N8SpSXDpWk9qa7eorpTStg==
+"@types/aws-lambda@^8.10.125":
+  version "8.10.125"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.125.tgz#c2ba86f7d98fe1827a7b048e0d31a65a8b5aed8c"
+  integrity sha512-Vqw/WMlV4O1fJT6capim01v7VLDZkcX1n6Yhb52E7IfnMqYbNfwHfyDV8rRN42NLBtdDvfaqcCqs2K0fr5ljZw==
 
 "@types/babel__core@^7.1.14":
   version "7.20.2"
