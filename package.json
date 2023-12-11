@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.126",
     "@types/jest": "^29.5.11",
-    "@types/node": "^20.10.3",
+    "@types/node": "^20.10.4",
     "aws-cdk": "2.114.1",
     "aws-cdk-lib": "2.113.0",
     "aws-sdk": "^2.1515.0",
