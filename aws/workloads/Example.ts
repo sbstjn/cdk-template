@@ -11,7 +11,7 @@ export class Example extends Workload {
   constructor(scope: IConstruct, props?: ExampleProps) {
     super(scope, 'example')
 
-    new StorageStack(this, 'storage')
-    new ComputeStack(this, 'compute')
+    const storage = new StorageStack(this, 'storage')
+    const compute = new ComputeStack(this, 'compute')
   }
 }

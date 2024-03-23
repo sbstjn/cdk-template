@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { App, Aspects } from 'aws-cdk-lib'
-import { UnifiedTags } from './aspects/UnifiedTags'
-import { Example } from './workloads/Example'
+import { App, Aspects } from 'aws-cdk-lib';
+import { UnifiedTags } from './aspects/UnifiedTags';
+import { Example } from './workloads/Example';
 
 const app = new App({
   context: {

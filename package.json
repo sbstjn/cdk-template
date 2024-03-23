@@ -48,5 +48,8 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@aws-community/arch-dia": "^1.1.2"
   }
 }
