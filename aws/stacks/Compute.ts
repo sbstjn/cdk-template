@@ -4,6 +4,7 @@ import {
   StackProps,
   aws_iam,
   aws_kms,
+  aws_lambda,
   aws_lambda_nodejs,
   aws_sns,
   aws_sns_subscriptions,
@@ -16,6 +17,7 @@ export interface ComputeStackProps extends StackProps {}
 export class ComputeStack extends Stack {
   key = new aws_kms.Key(this, 'key', {
     alias: 'compute/key',
+    enableKeyRotation: true,
   })
 
   queue = new aws_sqs.Queue(this, 'queue', {
@@ -23,6 +25,7 @@ export class ComputeStack extends Stack {
     encryption: aws_sqs.QueueEncryption.KMS,
     dataKeyReuse: Duration.minutes(5),
     encryptionMasterKey: this.key,
+    enforceSSL: true,
   })
 
   topic = new aws_sns.Topic(this, 'topic', {
@@ -31,6 +34,8 @@ export class ComputeStack extends Stack {
 
   process = new aws_lambda_nodejs.NodejsFunction(this, 'process', {
     entry: 'src/functions/process.ts',
+    runtime: aws_lambda.Runtime.NODEJS_20_X,
+    runtimeManagementMode: aws_lambda.RuntimeManagementMode.AUTO,
     environment: {
       TOPIC_ARN: this.topic.topicArn,
     },

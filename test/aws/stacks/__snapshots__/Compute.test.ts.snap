@@ -25,6 +25,7 @@ exports[`Stack Template match snapshot 1`] = `
     "keyFEDD6EC0": {
       "DeletionPolicy": "Retain",
       "Properties": {
+        "EnableKeyRotation": true,
         "KeyPolicy": {
           "Statement": [
             {
@@ -96,7 +97,7 @@ exports[`Stack Template match snapshot 1`] = `
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "e442148fa28aa746e7676e5f5c9c3de54f1f98d9a1fd1b96b52a9e391dd9b5f7.zip",
+          "S3Key": "a135ffcab3220ac3435b6d1d49c86e0704c0208cb9eed285d7c4f918dc7265a9.zip",
         },
         "Environment": {
           "Variables": {
@@ -113,7 +114,10 @@ exports[`Stack Template match snapshot 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs16.x",
+        "Runtime": "nodejs20.x",
+        "RuntimeManagementConfig": {
+          "UpdateRuntimeOn": "Auto",
+        },
       },
       "Type": "AWS::Lambda::Function",
     },
@@ -190,6 +194,24 @@ exports[`Stack Template match snapshot 1`] = `
       "Properties": {
         "PolicyDocument": {
           "Statement": [
+            {
+              "Action": "sqs:*",
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false",
+                },
+              },
+              "Effect": "Deny",
+              "Principal": {
+                "AWS": "*",
+              },
+              "Resource": {
+                "Fn::GetAtt": [
+                  "queue276F7297",
+                  "Arn",
+                ],
+              },
+            },
             {
               "Action": "sqs:SendMessage",
               "Condition": {

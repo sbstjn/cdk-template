@@ -33,6 +33,53 @@ exports[`Stack Template match snapshot 1`] = `
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Retain",
     },
+    "bucketPolicy638F945D": {
+      "Properties": {
+        "Bucket": {
+          "Ref": "bucket43879C71",
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:*",
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false",
+                },
+              },
+              "Effect": "Deny",
+              "Principal": {
+                "AWS": "*",
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "bucket43879C71",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "bucket43879C71",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
     "keyAliasCEB16DF2": {
       "Properties": {
         "AliasName": "alias/storage/key",
@@ -48,6 +95,7 @@ exports[`Stack Template match snapshot 1`] = `
     "keyFEDD6EC0": {
       "DeletionPolicy": "Retain",
       "Properties": {
+        "EnableKeyRotation": true,
         "KeyPolicy": {
           "Statement": [
             {
