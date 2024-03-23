@@ -1,12 +1,17 @@
 #!/usr/bin/env node
 
-import { App } from './base/App'
-import { AppStage } from './config'
-import { Components } from './stacks/Components'
+import { App, Aspects } from 'aws-cdk-lib'
+import { UnifiedTags } from './aspects/UnifiedTags'
+import { Example } from './workloads/Example'
 
 const app = new App({
-  name: 'example',
-  stage: AppStage.DEVELOPMENT,
+  context: {
+    version: 'v1.2.3',
+  },
 })
 
-app.add(Components)
+Aspects.of(app).add(new UnifiedTags())
+
+new Example(app, {
+  enableObservability: false,
+})

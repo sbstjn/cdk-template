@@ -7,7 +7,7 @@ export interface HandlerEvent {
   fails: boolean
 }
 
-export const run: Handler<HandlerEvent, boolean> = async (event) => {
+export const handler: Handler<HandlerEvent, boolean> = async (event) => {
   if (event.fails) {
     throw new Error('Failed on purpose')
   }

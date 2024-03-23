@@ -7,7 +7,7 @@ jest.mock('aws-sdk', () => ({
   SNS: spySNS
 }))
 
-import { run } from '../../../src/example/handler'
+import { handler } from '../../../src/functions/process'
 
 describe('Handler', () => {
   beforeAll(() => {
@@ -24,7 +24,7 @@ describe('Handler', () => {
     }))
 
     await expect(
-      run({ fails: false }, {} as Context, () => { })
+      handler({ fails: false }, {} as Context, () => { })
     ).resolves.toBeTruthy()
 
     expect(spySNSPublish).toHaveBeenCalledTimes(1)
@@ -33,7 +33,7 @@ describe('Handler', () => {
 
   it('throws exception', async () => {
     await expect(
-      run({ fails: true }, {} as Context, () => { })
+      handler({ fails: true }, {} as Context, () => { })
     ).rejects.toThrow('Failed on purpose')
 
     expect(spySNSPublish).toBeCalledTimes(0)

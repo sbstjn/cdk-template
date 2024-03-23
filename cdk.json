@@ -16,6 +16,7 @@
       "test"
     ]
   },
+  "versionReporting": false,
   "context": {
     "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
     "@aws-cdk/core:stackRelativeExports": true,
