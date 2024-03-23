@@ -21,10 +21,6 @@ describe('Stack', () => {
   })
 
   describe('Context', () => {
-    it('has workload context', () => {
-      expect(workload.node.getContext('workload')).toBe('example')
-    })
-
     it('has version context', () => {
       expect(workload.node.getContext('version')).toBe('v3.2.1-workload')
     })

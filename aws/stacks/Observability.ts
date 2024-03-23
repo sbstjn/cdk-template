@@ -1,22 +1,29 @@
-import { Aspects, Stack, Tags, aws_s3 } from 'aws-cdk-lib'
-import { IConstruct } from 'constructs'
+import { Aspects, Stack, aws_s3 } from 'aws-cdk-lib'
+import { Construct, IConstruct } from 'constructs'
 import { EnableLambdaXRayTracing } from '../aspects/EnableLambdaXRayTracing'
 import { S3BucketAccessLogs } from '../aspects/S3BucketAccessLogs'
+
+export interface ObservabilityStackProps {
+  cover: IConstruct[]
+}
 
 export class ObservabilityStack extends Stack {
   bucketS3AccessLogs = new aws_s3.Bucket(this, 's3-access-logs')
 
-  constructor(scope: IConstruct, id: string) {
+  constructor(scope: IConstruct, id: string, props: ObservabilityStackProps) {
     super(scope, id)
 
-    Tags.of(this).add('custom:observability', 'true')
+    props.cover.forEach(node => {
+      this.enableS3AccessLogs(node)
+      this.enableLambdaXRayTracing(node)
+    })
   }
 
-  public enableS3AccessLogs(stack: Stack) {
-    Aspects.of(stack).add(new S3BucketAccessLogs({ bucket: this.bucketS3AccessLogs }))
+  public enableS3AccessLogs(node: Construct) {
+    Aspects.of(node).add(new S3BucketAccessLogs({ bucket: this.bucketS3AccessLogs }))
   }
 
-  public enableLambdaXRayTracing(stack: Stack) {
-    Aspects.of(stack).add(new EnableLambdaXRayTracing())
+  public enableLambdaXRayTracing(node: Construct) {
+    Aspects.of(node).add(new EnableLambdaXRayTracing())
   }
 }
