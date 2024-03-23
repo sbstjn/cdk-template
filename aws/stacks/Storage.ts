@@ -12,16 +12,19 @@ export class StorageStack extends Stack {
   constructor(scope: IConstruct, id: string, props?: StorageStackProps) {
     super(scope, id, props)
 
-    new aws_s3.Bucket(this, 'bucket-one', {
+    const bucketProps = {
       bucketKeyEnabled: true,
       encryptionKey: this.key,
       enforceSSL: true,
+      blockPublicAccess: aws_s3.BlockPublicAccess.BLOCK_ALL,
+    }
+
+    new aws_s3.Bucket(this, 'bucket-one', {
+      ...bucketProps,
     })
 
     new aws_s3.Bucket(this, 'bucket-two', {
-      bucketKeyEnabled: true,
-      encryptionKey: this.key,
-      enforceSSL: true,
+      ...bucketProps,
     })
   }
 }

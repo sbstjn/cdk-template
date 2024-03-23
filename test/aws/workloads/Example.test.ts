@@ -16,7 +16,8 @@ describe('Stack', () => {
     })
 
     workload = new Example(app, {
-      enableObservability: true
+      enableObservability: true,
+      exportDiagram: false
     })
   })
 
