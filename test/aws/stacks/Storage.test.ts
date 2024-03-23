@@ -19,6 +19,12 @@ describe('Stack', () => {
     template = Template.fromStack(stack)
   })
 
+  describe('Template', () => {
+    it('match snapshot', () => {
+      expect(template.toJSON()).toMatchSnapshot();
+    })
+  })
+
   describe('S3 Bucket', () => {
     it('is created', () => {
       template.hasResource('AWS::S3::Bucket', {})

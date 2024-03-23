@@ -19,6 +19,12 @@ describe('Stack', () => {
     template = Template.fromStack(stack)
   })
 
+  describe('Template', () => {
+    it('match snapshot', () => {
+      expect(template.toJSON()).toMatchSnapshot();
+    })
+  })
+
   describe('SQS Queue', () => {
     it('is created', () => {
       template.hasResource('AWS::SQS::Queue', {
