@@ -1,15 +1,13 @@
-import { Aspects, Stack, StackProps, Tags, aws_s3 } from 'aws-cdk-lib'
+import { Aspects, Stack, Tags, aws_s3 } from 'aws-cdk-lib'
 import { IConstruct } from 'constructs'
 import { EnableLambdaXRayTracing } from '../aspects/EnableLambdaXRayTracing'
 import { S3BucketAccessLogs } from '../aspects/S3BucketAccessLogs'
 
-export interface ObservabilityStackProps extends StackProps {}
-
 export class ObservabilityStack extends Stack {
   bucketS3AccessLogs = new aws_s3.Bucket(this, 's3-access-logs')
 
-  constructor(scope: IConstruct, id: string, props?: ObservabilityStackProps) {
-    super(scope, id, props)
+  constructor(scope: IConstruct, id: string) {
+    super(scope, id)
 
     Tags.of(this).add('custom:observability', 'true')
   }

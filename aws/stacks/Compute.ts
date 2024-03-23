@@ -32,8 +32,8 @@ export class ComputeStack extends Stack {
     masterKey: this.key,
   })
 
-  process = new aws_lambda_nodejs.NodejsFunction(this, 'process', {
-    entry: 'src/functions/process.ts',
+  publish = new aws_lambda_nodejs.NodejsFunction(this, 'publish', {
+    entry: 'src/functions/publish.ts',
     runtime: aws_lambda.Runtime.NODEJS_20_X,
     runtimeManagementMode: aws_lambda.RuntimeManagementMode.AUTO,
     environment: {
@@ -55,11 +55,11 @@ export class ComputeStack extends Stack {
         sid: 'allow-sns',
         effect: aws_iam.Effect.ALLOW,
         resources: ['*'],
-        principals: [new aws_iam.ServicePrincipal('sns'), this.process.role!],
+        principals: [new aws_iam.ServicePrincipal('sns'), this.publish.role!],
         actions: ['kms:Decrypt', 'kms:GenerateDataKey'],
       }),
     )
 
-    this.topic.grantPublish(this.process)
+    this.topic.grantPublish(this.publish)
   }
 }

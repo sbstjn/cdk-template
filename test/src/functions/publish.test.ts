@@ -7,9 +7,9 @@ jest.mock('aws-sdk', () => ({
   SNS: spySNS
 }))
 
-import { handler } from '../../../src/functions/process'
+import { handler } from '../../../src/functions/publish'
 
-describe('Handler', () => {
+describe('Publish', () => {
   beforeAll(() => {
     process.env.TOPIC_ARN = 'ExampleTopic'
   })

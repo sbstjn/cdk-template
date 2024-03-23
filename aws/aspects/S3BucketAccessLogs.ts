@@ -11,9 +11,9 @@ export class S3BucketAccessLogs implements IAspect {
 
   public visit(node: IConstruct): void {
     if (node instanceof aws_s3.CfnBucket) {
-      if (!node.loggingConfiguration) {
-        node.addOverride('Properties.LoggingConfiguration.DestinationBucketName', this.props.bucket.bucketName)
-        node.addOverride('Properties.LoggingConfiguration.LogFilePrefix', `${node.node.scope!.node.id}/`)
+      node.loggingConfiguration = {
+        destinationBucketName: this.props.bucket.bucketName,
+        logFilePrefix: `${node.node.scope!.node.id}/`,
       }
     }
   }

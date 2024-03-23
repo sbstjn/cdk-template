@@ -71,7 +71,7 @@ exports[`Stack Template match snapshot 1`] = `
               "Principal": {
                 "AWS": {
                   "Fn::GetAtt": [
-                    "processServiceRole4D05741A",
+                    "publishServiceRoleD6DF777D",
                     "Arn",
                   ],
                 },
@@ -87,17 +87,17 @@ exports[`Stack Template match snapshot 1`] = `
       "Type": "AWS::KMS::Key",
       "UpdateReplacePolicy": "Retain",
     },
-    "process321CE2AE": {
+    "publish98FFDE07": {
       "DependsOn": [
-        "processServiceRoleDefaultPolicy711CAD66",
-        "processServiceRole4D05741A",
+        "publishServiceRoleDefaultPolicy1754110B",
+        "publishServiceRoleD6DF777D",
       ],
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "a135ffcab3220ac3435b6d1d49c86e0704c0208cb9eed285d7c4f918dc7265a9.zip",
+          "S3Key": "b210180f272c1d6692c283ae33cb57b7d6516bcf712b1bde1dd63a4ec23e2de0.zip",
         },
         "Environment": {
           "Variables": {
@@ -110,7 +110,7 @@ exports[`Stack Template match snapshot 1`] = `
         "Handler": "index.handler",
         "Role": {
           "Fn::GetAtt": [
-            "processServiceRole4D05741A",
+            "publishServiceRoleD6DF777D",
             "Arn",
           ],
         },
@@ -121,7 +121,7 @@ exports[`Stack Template match snapshot 1`] = `
       },
       "Type": "AWS::Lambda::Function",
     },
-    "processServiceRole4D05741A": {
+    "publishServiceRoleD6DF777D": {
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -152,7 +152,7 @@ exports[`Stack Template match snapshot 1`] = `
       },
       "Type": "AWS::IAM::Role",
     },
-    "processServiceRoleDefaultPolicy711CAD66": {
+    "publishServiceRoleDefaultPolicy1754110B": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -166,10 +166,10 @@ exports[`Stack Template match snapshot 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "processServiceRoleDefaultPolicy711CAD66",
+        "PolicyName": "publishServiceRoleDefaultPolicy1754110B",
         "Roles": [
           {
-            "Ref": "processServiceRole4D05741A",
+            "Ref": "publishServiceRoleD6DF777D",
           },
         ],
       },
