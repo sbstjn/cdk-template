@@ -15,7 +15,9 @@ describe('Stack', () => {
       }
     })
 
-    workload = new Example(app)
+    workload = new Example(app, {
+      enableObservability: true
+    })
   })
 
   describe('Context', () => {

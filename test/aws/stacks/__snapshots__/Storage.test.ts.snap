@@ -10,7 +10,7 @@ exports[`Stack Template match snapshot 1`] = `
     },
   },
   "Resources": {
-    "bucket43879C71": {
+    "bucketone7405C5CC": {
       "DeletionPolicy": "Retain",
       "Properties": {
         "BucketEncryption": {
@@ -33,10 +33,10 @@ exports[`Stack Template match snapshot 1`] = `
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Retain",
     },
-    "bucketPolicy638F945D": {
+    "bucketonePolicy51D7F2B3": {
       "Properties": {
         "Bucket": {
-          "Ref": "bucket43879C71",
+          "Ref": "bucketone7405C5CC",
         },
         "PolicyDocument": {
           "Statement": [
@@ -54,7 +54,7 @@ exports[`Stack Template match snapshot 1`] = `
               "Resource": [
                 {
                   "Fn::GetAtt": [
-                    "bucket43879C71",
+                    "bucketone7405C5CC",
                     "Arn",
                   ],
                 },
@@ -64,7 +64,77 @@ exports[`Stack Template match snapshot 1`] = `
                     [
                       {
                         "Fn::GetAtt": [
-                          "bucket43879C71",
+                          "bucketone7405C5CC",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
+    "buckettwo3722AC0B": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "BucketKeyEnabled": true,
+              "ServerSideEncryptionByDefault": {
+                "KMSMasterKeyID": {
+                  "Fn::GetAtt": [
+                    "keyFEDD6EC0",
+                    "Arn",
+                  ],
+                },
+                "SSEAlgorithm": "aws:kms",
+              },
+            },
+          ],
+        },
+      },
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "buckettwoPolicy18E3CD18": {
+      "Properties": {
+        "Bucket": {
+          "Ref": "buckettwo3722AC0B",
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:*",
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false",
+                },
+              },
+              "Effect": "Deny",
+              "Principal": {
+                "AWS": "*",
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "buckettwo3722AC0B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "buckettwo3722AC0B",
                           "Arn",
                         ],
                       },
