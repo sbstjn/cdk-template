@@ -5,10 +5,12 @@ export class EnableLambdaXRayTracing implements IAspect {
   constructor() {}
 
   public visit(node: IConstruct): void {
-    if (node instanceof aws_lambda.CfnFunction) {
-      node.tracingConfig = {
-        mode: 'Active',
-      }
+    if (!(node instanceof aws_lambda.CfnFunction)) {
+      return
+    }
+
+    node.tracingConfig = {
+      mode: 'Active',
     }
   }
 }

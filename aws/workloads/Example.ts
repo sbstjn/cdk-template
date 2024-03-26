@@ -1,5 +1,6 @@
 import { App } from 'aws-cdk-lib'
 import { Construct, IConstruct } from 'constructs'
+import { AccessStack } from '../stacks/Access'
 import { ComputeStack } from '../stacks/Compute'
 import { ObservabilityStack } from '../stacks/Observability'
 import { StorageStack } from '../stacks/Storage'
@@ -16,10 +17,11 @@ export class Example extends Construct {
 
     const storage = new StorageStack(this, 'storage')
     const compute = new ComputeStack(this, 'compute')
+    const access = new AccessStack(this, 'access')
 
     if (props.enableObservability) {
       new ObservabilityStack(this, 'observability', {
-        cover: [storage, compute],
+        cover: [storage, compute, access],
       })
     }
 
