@@ -3,8 +3,6 @@ import { RetentionDays } from 'aws-cdk-lib/aws-logs'
 import { Construct, IConstruct } from 'constructs'
 
 export class HTTPApiGatewayLogs implements IAspect {
-  constructor() {}
-
   public visit(node: IConstruct): void {
     if (!(node instanceof aws_apigatewayv2.CfnStage)) {
       return
