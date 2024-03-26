@@ -1,4 +1,4 @@
-import { IAspect, Tags, aws_apigatewayv2, aws_iam, aws_logs } from 'aws-cdk-lib'
+import { IAspect, aws_apigatewayv2, aws_iam, aws_logs } from 'aws-cdk-lib'
 import { RetentionDays } from 'aws-cdk-lib/aws-logs'
 import { Construct, IConstruct } from 'constructs'
 
@@ -11,7 +11,6 @@ export class HTTPApiGatewayLogs implements IAspect {
     }
 
     const scope = new Construct(node.node.scope!, 'logs')
-    Tags.of(scope).add('custom:aspect', HTTPApiGatewayLogs.name)
 
     const group = new aws_logs.LogGroup(scope, `group`, {
       logGroupName: `/${node.node.scope!}`,
