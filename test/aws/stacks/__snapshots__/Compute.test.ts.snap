@@ -97,7 +97,7 @@ exports[`Stack Template match snapshot 1`] = `
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "1cda00555f4d343822e292e6f49c4910db8a409e4fdb0bf7c460d72029bb2c28.zip",
+          "S3Key": "c33a21d5e443dc353c988694d76c67a91fba22fde6946c1250293fbfd93ec65c.zip",
         },
         "Environment": {
           "Variables": {
