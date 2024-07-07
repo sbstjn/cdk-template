@@ -97,11 +97,10 @@ exports[`Stack Template match snapshot 1`] = `
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "b210180f272c1d6692c283ae33cb57b7d6516bcf712b1bde1dd63a4ec23e2de0.zip",
+          "S3Key": "1cda00555f4d343822e292e6f49c4910db8a409e4fdb0bf7c460d72029bb2c28.zip",
         },
         "Environment": {
           "Variables": {
-            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
             "TOPIC_ARN": {
               "Ref": "topic69831491",
             },

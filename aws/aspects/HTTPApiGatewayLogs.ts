@@ -1,5 +1,4 @@
 import { IAspect, aws_apigatewayv2, aws_iam, aws_logs } from 'aws-cdk-lib'
-import { RetentionDays } from 'aws-cdk-lib/aws-logs'
 import { Construct, IConstruct } from 'constructs'
 
 export class HTTPApiGatewayLogs implements IAspect {
@@ -12,7 +11,7 @@ export class HTTPApiGatewayLogs implements IAspect {
 
     const group = new aws_logs.LogGroup(scope, `group`, {
       logGroupName: `/${node.node.scope!}`,
-      retention: RetentionDays.ONE_WEEK,
+      retention: aws_logs.RetentionDays.ONE_WEEK,
     })
 
     const role = new aws_iam.Role(scope, `role`, {

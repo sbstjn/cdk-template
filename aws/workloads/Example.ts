@@ -1,5 +1,6 @@
 import { App } from 'aws-cdk-lib'
 import { Construct, IConstruct } from 'constructs'
+
 import { AccessStack } from '../stacks/Access'
 import { ComputeStack } from '../stacks/Compute'
 import { ObservabilityStack } from '../stacks/Observability'

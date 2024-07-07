@@ -1,6 +1,6 @@
+import { App } from 'aws-cdk-lib'
 import { Template } from 'aws-cdk-lib/assertions'
 
-import { App } from 'aws-cdk-lib/core'
 import { Example } from '../../../aws/workloads/Example'
 
 describe('Stack', () => {
@@ -11,13 +11,13 @@ describe('Stack', () => {
   beforeAll(() => {
     app = new App({
       context: {
-        version: 'v3.2.1-workload'
-      }
+        version: 'v3.2.1-workload',
+      },
     })
 
     workload = new Example(app, {
       enableObservability: true,
-      exportDiagram: false
+      exportDiagram: false,
     })
   })
 

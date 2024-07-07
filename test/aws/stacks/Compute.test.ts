@@ -1,6 +1,6 @@
+import { App, Stack } from 'aws-cdk-lib'
 import { Template } from 'aws-cdk-lib/assertions'
 
-import { App, Stack } from 'aws-cdk-lib/core'
 import { ComputeStack } from '../../../aws/stacks/Compute'
 
 describe('Stack', () => {
@@ -11,8 +11,8 @@ describe('Stack', () => {
   beforeAll(() => {
     app = new App({
       context: {
-        version: 'v3.2.1-compute'
-      }
+        version: 'v3.2.1-compute',
+      },
     })
 
     stack = new ComputeStack(app, 'compute')
@@ -21,7 +21,7 @@ describe('Stack', () => {
 
   describe('Template', () => {
     it('match snapshot', () => {
-      expect(template.toJSON()).toMatchSnapshot();
+      expect(template.toJSON()).toMatchSnapshot()
     })
   })
 

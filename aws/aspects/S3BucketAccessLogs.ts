@@ -1,9 +1,8 @@
 import { IAspect, aws_s3 } from 'aws-cdk-lib'
-import { IBucket } from 'aws-cdk-lib/aws-s3'
 import { IConstruct } from 'constructs'
 
 export interface S3BucketAccessLogsProps {
-  bucket: IBucket
+  bucket: aws_s3.IBucket
 }
 
 export class S3BucketAccessLogs implements IAspect {
