@@ -30,10 +30,10 @@
   resolved "https://registry.npmjs.org/@aws-community/arch-dia/-/arch-dia-1.1.2.tgz#8db2070f2e5c75254bba5d074fd386a3682a385b"
   integrity sha512-mnmvpHyi84QJCn/NNBPMX/0a6alsI/tNLhbiRaHJz4YxBa0EsEd7czgdJBZj6XMSp+2lJmjWrQO8TXc9zn3e1w==
 
-"@aws/pdk@^0.23.47":
-  version "0.23.47"
-  resolved "https://registry.yarnpkg.com/@aws/pdk/-/pdk-0.23.47.tgz#83858e5ec016b14fb7003a7f3147b518b57b7e76"
-  integrity sha512-5pSVlBWUuDJ+X0x1fnn+o5uQYIXxp/qDtkVXSbiLtN/9YrK5XicRNnkx8oOkGtuGvl6r9uV+JZVjc68N8p60dw==
+"@aws/pdk@^0.23.48":
+  version "0.23.48"
+  resolved "https://registry.yarnpkg.com/@aws/pdk/-/pdk-0.23.48.tgz#c6cb588bb826e8d41f0a766413adb15a83beb154"
+  integrity sha512-B8DcaF9ptec9rO2/kBdbH+hliYUdGhu0Q+4hhDOgKd0nRLZrssvW5lUEf4EKcZGQ0m9G2VWtecej7yBtdplsjg==
   dependencies:
     "@pnpm/reviewing.dependencies-hierarchy" "2.1.11"
     chalk "^4.x"
