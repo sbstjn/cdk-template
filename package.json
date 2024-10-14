@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@aws-community/arch-dia": "^1.1.2",
-    "@aws/pdk": "^0.23.60",
+    "@aws/pdk": "^0.23.65",
     "cdk-nag": "^2.29.6"
   }
 }
