@@ -1626,10 +1626,10 @@ case@1.6.3:
   resolved "https://registry.npmjs.org/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk-nag@^2.31.2:
-  version "2.31.2"
-  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.31.2.tgz#e3a37c70cde6d3677bd1384ab96df8fb23e9a5d2"
-  integrity sha512-b1VfiDtfWkTXGzsLLsMk5+gNapZOgY+alNQpf6FsBfIIYWsSsPeZ7S0SqiKlEC+Kvta1k55MX7OPfJEYH8uDMA==
+cdk-nag@^2.32.2:
+  version "2.32.2"
+  resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-2.32.2.tgz#f5030829640e4fe1f381e73a61b04a120db9aec6"
+  integrity sha512-QwHWjG1f49DGc7qkZwhx+h/gQ4VKJszRjpRNKXAcBUasATNpBeRHilicVSqnclQnjI+NhP1+NVZqux8zYxfV0g==
 
 chalk@^2.4.2:
   version "2.4.2"
