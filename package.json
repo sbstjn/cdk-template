@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.0",
-    "@types/aws-lambda": "^8.10.146",
+    "@types/aws-lambda": "^8.10.148",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.2",
     "aws-cdk": "^2.173.4",
